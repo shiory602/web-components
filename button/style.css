@@ -1,0 +1,52 @@
+.component {
+  max-width: 1000px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*========= ボタンアニメーション ===============*/
+#btn_animation .btn {
+  display: block;
+  width: fit-content;
+  position: relative;
+  border-radius: 20px;
+  text-decoration: none;
+  background-color: #89e882;
+  color: #fbfbfb;
+  text-align: center;
+  overflow: hidden;
+  float: right;
+  padding: 10px 50px;
+}
+
+#btn_animation .btn:hover {
+    text-decoration: none;
+    color: #60e360;
+}
+
+#btn_animation .btn::before {
+    position: absolute;
+    content: '';
+    display: inbtn-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #62e360;
+    animation: btn_animation 3s ease-in-out infinite;
+}
+
+  
+@keyframes btn_animation {
+  0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+  80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+  81% { -webkit-transform: scale(4) rotate(45deg); opacity: 0.9; }
+  100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+
+#btn_animation .btn.center{
+float: none;
+margin: 0 auto;
+}
